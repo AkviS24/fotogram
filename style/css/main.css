@@ -8,3 +8,16 @@ body {
     width: 100%;
     background-color: #06171E;
 }
+
+h1 {
+  font-family: 'Figtree', Arial, sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('../fonts/Figtree-Italic[wght].ttf') format('ttf'),
+       url('../fonts/Figtree[wght].ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
