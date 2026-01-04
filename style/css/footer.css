@@ -1,10 +1,5 @@
 .footer {
-    background-color: #09212A;
-    height: 120px;
+    background-image: url("/img/Footer.svg");
     width: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: 16px;
-    position: absolute;
-    bottom: 0;
+    object-fit: cover;
 }
