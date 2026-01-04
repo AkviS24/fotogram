@@ -8,7 +8,6 @@ body {
     background-color: #06171E;
     color: white;
     scroll-behavior: smooth;
-    height: 100vh;
 }
 
 .content-container {

@@ -19,3 +19,8 @@
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
+.main-view h1 {
+    font-family: "Figtree", sans-serif;
+    font-size: clamp(24px, 5vw, 56px);
+}
