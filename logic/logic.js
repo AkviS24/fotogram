@@ -14,3 +14,14 @@ const images = [
     "Snow-leopard.jpg",
     "Travel.jpg"
 ];
+
+function loadImages() {
+    
+    for(let i = 0; i < images.length; i++){
+        const imageCreate = document.createElement("img");
+        imageCreate.src = "./img/pic/" + `${images[i]}`;
+        imageCreate.className = "images";
+        imageRef.appendChild(imageCreate);
+    }
+
+}
