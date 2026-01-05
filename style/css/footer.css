@@ -2,8 +2,9 @@
     background-color: #09212A;
     border-top-right-radius: 20%;
     border-top-left-radius: 20%;
-    height: 120px;
     bottom: 0;
-    position: absolute;
+    left: 0;
+    right: 0;
     width: 100%;
+    padding: 56px;
 }

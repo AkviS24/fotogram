@@ -1,6 +1,7 @@
 console.log("run");
 
 const imageRef = document.getElementById("image-container");
+const dialogRef = document.getElementById("dialog");
 const images = [
     "Alaska.jpg",
     "Anime.jpg",
@@ -21,7 +22,17 @@ function loadImages() {
         const imageCreate = document.createElement("img");
         imageCreate.src = "./img/pic/" + `${images[i]}`;
         imageCreate.className = "images";
+        imageCreate.addEventListener("click", showDialog);
         imageRef.appendChild(imageCreate);
     }
 
+}
+
+function showDialog() {
+    console.log("OnClick");
+    dialogRef.showModal();
+}
+
+function closeDialog() {
+    dialogRef.close();
 }
