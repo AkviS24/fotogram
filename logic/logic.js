@@ -23,16 +23,18 @@ function loadImages() {
         imageCreate.src = "./img/pic/" + `${images[i]}`;
         imageCreate.className = "images";
         imageCreate.addEventListener("click", showDialog);
+        imageCreate.ariaHasPopup = "dialog";
         imageRef.appendChild(imageCreate);
     }
 
 }
 
-function showDialog() {
+function showDialog(i) {
     console.log("OnClick");
+    console.log(i);
     dialogRef.showModal();
 }
 
-function closeDialog() {
+function closeDialog() {    
     dialogRef.close();
 }
