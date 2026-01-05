@@ -19,3 +19,11 @@ body {
     margin-right: 160px;
     max-width: 1440px;
 }
+
+
+@media(max-width: 500px) {
+    .content-container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
