@@ -15,7 +15,7 @@
 
 .dialog img {
   width: 560px;
-  max-height: 240px;
+  max-height: 375px;
   object-fit: cover;
   object-position: center;
 }
