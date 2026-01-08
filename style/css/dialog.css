@@ -1,21 +1,22 @@
-.dialog {
-    border-radius: 32px;
-    padding: 56px;
-    background-color: #06171E;
-    width: 560px;
-    height: 560px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dialog.opened {
+  border-radius: 32px;
+  padding: 56px;
+  background-color: #06171E;
+  width: 560px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .dialog[open] {
   border-radius: 32px;
-    padding: 56px;
-    background-color: #06171E;
-    width: 560px;
-    height: 560px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 56px;
+  background-color: #06171E;
+  width: 560px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
