@@ -1,26 +1,38 @@
 .dialog {
-  border-radius: 32px;
-  padding: 56px;
-  
-  width: 560px;
-  height: 560px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dialog ::backdrop {
   background-color: #06171E;
+  color: white;
 }
-
 
 .dialog.opened {
   border-radius: 32px;
   padding: 56px;
-  background-color: #06171E;
-  width: 560px;
-  height: 560px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
+
+.dialog img {
+  width: 560px;
+  max-height: 240px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dialog ::backdrop {
+  background-color: aqua;
+}
+
+.displayFlexForDialog {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.displayFlexForDialog img {
+  max-width: 48px;
+  object-fit: cover;
+
+}
+

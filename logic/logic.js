@@ -8,13 +8,13 @@ const images = [
     "Alaska.jpg",
     "Anime.jpg",
     "Atmosphere.jpg",
-    "Blue-tit.jpg",
+    "Blue-Tit.jpg",
     "Hurricane.jpg",
     "Lake.jpg",
     "Moorente.jpg",
     "Sea.jpg",
-    "Snow-bunting.jpg",
-    "Snow-leopard.jpg",
+    "Snow-Bunting.jpg",
+    "Snow-Leopard.jpg",
     "Travel.jpg"
 ];
 
@@ -34,15 +34,37 @@ function showDialog(i) {
 function getHTMLNoteForDialog(i) {
     return `
         <div class="dialog content-container">
-            <header>
-            <h2>${images[i]}</h2>
-        </header>
-        <section>
-            <img class="images" src="../img/pic/${images[i]}" alt="${images[i]}" onclick="closeDialog()">
-        </section>
+            <header class="displayFlexForDialog">
+                <h2>${images[i]}</h2>
+                <button onclick="closeDialog()">Schliessen</button>
+            </header>
+            <section>
+                <img class="images" src="../img/pic/${images[i]}" alt="${images[i]}">
+                <div class="displayFlexForDialog">
+                    <img src="../img/pic/pfeil-links.png" alt="Button für das vorige Bild" onclick="vorigesBild(${i})">
+                    <img src="../img/pic/pfeil-rechts.png" alt="Button für das nächste Bild" onclick="naechstesBild(${i})">
+                </div>
+            </section>
         </div>
     `
 }
+
+function vorigesBild(i) {
+    i--;
+    if(i < 0) {
+        i++;
+    }
+    return showDialog(i);
+}
+
+function naechstesBild(i) {
+    i++;
+    if(i > 10) {
+        i--;
+    }
+    return showDialog(i);
+}
+
 
 function closeDialog() {    
     dialogRef.classList.remove("dialog");
