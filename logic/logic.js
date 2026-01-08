@@ -52,7 +52,7 @@ function getHTMLNoteForDialog(i) {
 function vorigesBild(i) {
     i--;
     if(i < 0) {
-        i++;
+        i = 10;
     }
     return showDialog(i);
 }
@@ -60,7 +60,7 @@ function vorigesBild(i) {
 function naechstesBild(i) {
     i++;
     if(i > 10) {
-        i--;
+        i= 0;
     }
     return showDialog(i);
 }
