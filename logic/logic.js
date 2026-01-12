@@ -28,12 +28,13 @@ function showDialog(i) {
     console.log(i);
     dialogRef.innerHTML = getHTMLNoteForDialog(i);
     dialogRef.classList = "dialog content-container";
+    dialogRef.classList.add("opened");
     dialogRef.showModal();
 }
 
 function getHTMLNoteForDialog(i) {
     return `
-        <div class="dialog dialog-position content-container">
+        <div class="content-container">
             <header class="displayFlexForDialog">
                 <h2 id="dialogTitle">${images[i]}</h2>
                 <button aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
@@ -67,6 +68,7 @@ function naechstesBild(i) {
 
 
 function closeDialog() {    
+    dialogRef.classList.remove("opened");
     dialogRef.classList.remove("dialog");
     dialogRef.close();
 }

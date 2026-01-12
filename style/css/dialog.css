@@ -7,7 +7,7 @@
 .dialog {
   background-color: #06171E;
   color: white;
-  width: 80%;
+  width: 100%;
   height: 80vh;
   overflow: hidden;
   display: flex;
@@ -19,7 +19,7 @@
 
 .dialog.opened {
   border-radius: 32px;
-  padding: 56px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +29,7 @@
 
 .dialog-image {
   width: 560px;
-  max-height: 375px;
+  height: 375px;
   object-fit: cover;
   object-position: center;
 }
@@ -47,6 +47,8 @@
 
 .displayFlexForDialog img {
   max-width: 48px;
+  margin-left: 8px;
+  margin-right: 8px;
   object-fit: cover;
 
 }
