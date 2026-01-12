@@ -42,8 +42,8 @@ function getHTMLNoteForDialog(i) {
             <section>
                 <img class="displayFlexForDialog dialog-image" src="../img/pic/${images[i]}" alt="${images[i]}">
                 <div class="displayFlexForDialog">
-                    <img tabindex="0" type="button" src="../img/pic/pfeil-links.png" alt="Button für das vorige Bild" onclick="prevPicture(${i})">
-                    <img tabindex="0" type="button" src="../img/pic/pfeil-rechts.png" alt="Button für das nächste Bild" onclick="nextPicture(${i})">
+                    <img tabindex="0" type="button" src="../img/pic/pfeil-links.png" alt="Button für das vorige Bild" onkeydown="prevPicture(${i})" onclick="prevPicture(${i})">
+                    <img tabindex="0" type="button" src="../img/pic/pfeil-rechts.png" alt="Button für das nächste Bild" onkeydown="nextPicture(${i})" onclick="nextPicture(${i})">
                 </div>
             </section>
         </div>
