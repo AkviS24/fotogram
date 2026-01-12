@@ -28,14 +28,13 @@ function showDialog(i) {
     console.log(i);
     dialogRef.innerHTML = getHTMLNoteForDialog(i);
     dialogRef.classList.add("dialog");
-    dialogRef.classList.add("content-container");
     dialogRef.classList.add("opened");
     dialogRef.showModal();
 }
 
 function getHTMLNoteForDialog(i) {
     return `
-        <div class="content-container">
+        <div>
             <header class="displayFlexForDialog">
                 <h2 id="dialogTitle">${images[i]}</h2>
                 <button aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
