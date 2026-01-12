@@ -36,7 +36,7 @@ function getHTMLNoteForDialog(i) {
         <div class="dialog content-container">
             <header class="displayFlexForDialog">
                 <h2 id="dialogTitle">${images[i]}</h2>
-                <button onclick="closeDialog()">Schliessen</button>
+                <button aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
             </header>
             <section>
                 <img class="images" src="../img/pic/${images[i]}" alt="${images[i]}">
