@@ -37,13 +37,13 @@ function getHTMLNoteForDialog(i) {
         <div>
             <header class="displayFlexForDialog">
                 <h2 id="dialogTitle">${images[i]}</h2>
-                <button aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
+                <button tabindex="0" aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
             </header>
             <section>
                 <img class="displayFlexForDialog dialog-image" src="../img/pic/${images[i]}" alt="${images[i]}">
                 <div class="displayFlexForDialog">
-                    <img tabindex=0; type="button" src="../img/pic/pfeil-links.png" alt="Button für das vorige Bild" onclick="prevPicture(${i})">
-                    <img tabindex=0 type="button" src="../img/pic/pfeil-rechts.png" alt="Button für das nächste Bild" onclick="nextPicture(${i})">
+                    <img tabindex="0" type="button" src="../img/pic/pfeil-links.png" alt="Button für das vorige Bild" onclick="prevPicture(${i})">
+                    <img tabindex="0" type="button" src="../img/pic/pfeil-rechts.png" alt="Button für das nächste Bild" onclick="nextPicture(${i})">
                 </div>
             </section>
         </div>
