@@ -53,6 +53,7 @@
 @media(max-width: 700px) {
   .dialog-image {
     max-width: 250px;
+    max-height: auto;
   }
 }
 
