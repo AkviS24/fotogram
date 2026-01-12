@@ -27,7 +27,7 @@ function loadImages() {
 function showDialog(i) {
     console.log(i);
     dialogRef.innerHTML = getHTMLNoteForDialog(i);
-    dialogRef.classList = "dialog";
+    dialogRef.classList = "dialog content-container";
     dialogRef.showModal();
 }
 

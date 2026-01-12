@@ -34,8 +34,9 @@
   object-position: center;
 }
 
-.dialog ::backdrop {
+.dialog::backdrop {
   background-color: aqua;
+  opacity: 0.1;
 }
 
 .displayFlexForDialog {
@@ -52,8 +53,7 @@
 
 @media(max-width: 700px) {
   .dialog-image {
-    max-width: 250px;
-    max-height: auto;
+    width: 360px;
   }
 }
 
