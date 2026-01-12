@@ -29,3 +29,10 @@ body {
         margin-right: 40px;
     }
 }
+
+@media(max-width: 400px) {
+    .content-container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

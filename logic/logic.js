@@ -33,7 +33,7 @@ function showDialog(i) {
 
 function getHTMLNoteForDialog(i) {
     return `
-        <div class="dialog content-container">
+        <div class="dialog dialog-position content-container">
             <header class="displayFlexForDialog">
                 <h2 id="dialogTitle">${images[i]}</h2>
                 <button aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
