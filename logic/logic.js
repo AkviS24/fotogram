@@ -20,7 +20,7 @@ const images = [
 
 function loadImages() {   
     for(let i = 0; i < images.length; i++){
-        imageRef.innerHTML += `<img src="../img/pic/${images[i]}" alt="${images[i]}" onclick="showDialog(${i})" class="images">`;
+        imageRef.innerHTML += `<img src="../img/pic/${images[i]}" alt="${images[i]}" onclick="showDialog(${i})" class="images" aria-haspopup="dialog" aria-controls="dialog">`;
     }
 }
 
@@ -35,7 +35,7 @@ function getHTMLNoteForDialog(i) {
     return `
         <div class="dialog content-container">
             <header class="displayFlexForDialog">
-                <h2>${images[i]}</h2>
+                <h2 id="dialogTitle">${images[i]}</h2>
                 <button onclick="closeDialog()">Schliessen</button>
             </header>
             <section>
