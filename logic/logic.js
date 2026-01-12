@@ -39,7 +39,7 @@ function getHTMLNoteForDialog(i) {
                 <button aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
             </header>
             <section>
-                <img class="displayFlexForDialog" src="../img/pic/${images[i]}" alt="${images[i]}">
+                <img class="displayFlexForDialog dialog-image" src="../img/pic/${images[i]}" alt="${images[i]}">
                 <div class="displayFlexForDialog">
                     <img src="../img/pic/pfeil-links.png" alt="Button für das vorige Bild" onclick="vorigesBild(${i})">
                     <img src="../img/pic/pfeil-rechts.png" alt="Button für das nächste Bild" onclick="naechstesBild(${i})">

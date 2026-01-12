@@ -27,7 +27,7 @@
   overflow: hidden;
 }
 
-.dialog img {
+.dialog-image {
   width: 560px;
   max-height: 375px;
   object-fit: cover;
@@ -48,5 +48,11 @@
   max-width: 48px;
   object-fit: cover;
 
+}
+
+@media(max-width: 700px) {
+  .dialog-image {
+    max-width: 250px;
+  }
 }
 
