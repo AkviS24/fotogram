@@ -1,5 +1,5 @@
-console.log("run");
 
+let currentIndex = 0;
 const imageRef = document.getElementById("image-container");
 const dialogRef = document.getElementById("dialog");
 const dialogImageNameRef = document.getElementById("dialogImageName");
@@ -25,8 +25,9 @@ function loadImages() {
 }
 
 function showDialog(i) {
+    currentIndex = i;
     console.log(i);
-    dialogRef.innerHTML = getHTMLNoteForDialog(i);
+    dialogRef.innerHTML = getHTMLNoteForDialog(currentIndex);
     dialogRef.showModal();
 }
 
@@ -50,19 +51,19 @@ function getHTMLNoteForDialog(i) {
 }
 
 function prevPicture(i) {
-    i--;
-    if(i < 0) {
-        i = 10;
+    currentIndex--;
+    if(currentIndex < 0) {
+        currentIndex = images.length - 1;
     }
-    return showDialog(i);
+    showDialog(currentIndex);
 }
 
 function nextPicture(i) {
-    i++;
-    if(i > 10) {
-        i= 0;
+    currentIndex++;
+    if(currentIndex >= images.length) {
+        currentIndex = 0;
     }
-    return showDialog(i);
+    showDialog(currentIndex);
 }
 
 
@@ -71,3 +72,15 @@ function closeDialog() {
     dialogRef.classList.remove("dialog");
     dialogRef.close();
 }
+
+document.addEventListener('keydown', function(event) {
+    if (dialogRef.open) {
+        if (event.key === "ArrowLeft") {
+            prevPicture();
+        } else if (event.key === "ArrowRight") {
+            nextPicture();
+        } else if (event.key === "Escape") {
+            closeDialog();
+        }
+    }
+})
