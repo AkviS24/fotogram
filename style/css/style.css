@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    cursor: pointer;
+    
 }
 
 body {
@@ -17,22 +17,17 @@ body {
 }
 
 .content-container {
-    margin-left: 160px;
-    margin-right: 160px;
     max-width: 1440px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
 }
 
 
-@media(max-width: 500px) {
-    .content-container {
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-}
-
-@media(max-width: 400px) {
-    .content-container {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+@media (max-width: 480px) {
+  .content-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

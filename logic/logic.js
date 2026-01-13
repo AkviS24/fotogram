@@ -27,27 +27,26 @@ function loadImages() {
 function showDialog(i) {
     console.log(i);
     dialogRef.innerHTML = getHTMLNoteForDialog(i);
-    dialogRef.classList.add("dialog");
-    dialogRef.classList.add("opened");
     dialogRef.showModal();
 }
 
 function getHTMLNoteForDialog(i) {
     return `
-        <div>
-            <header class="displayFlexForDialog">
-                <h2 id="dialogTitle">${images[i]}</h2>
-                <button tabindex="0" aria-label="Dialog schließen" onclick="closeDialog()">Schliessen</button>
-            </header>
-            <section>
-                <img class="displayFlexForDialog dialog-image" src="../img/pic/${images[i]}" alt="${images[i]}">
-                <div class="displayFlexForDialog">
-                    <img tabindex="0" type="button" src="../img/pic/pfeil-links.png" alt="Button für das vorige Bild" onkeydown="prevPicture(${i})" onclick="prevPicture(${i})">
-                    <img tabindex="0" type="button" src="../img/pic/pfeil-rechts.png" alt="Button für das nächste Bild" onkeydown="nextPicture(${i})" onclick="nextPicture(${i})">
-                </div>
-            </section>
-        </div>
-    `
+    <div class="dialog-content">
+        <header class="dialog-header">
+            <h2 id="dialogTitle">${images[i]}</h2>
+            <button class="dialog-close" onclick="closeDialog()">✕</button>
+        </header>
+
+        <img class="dialog-image" src="../img/pic/${images[i]}" alt="${images[i]}">
+
+        <footer class="dialog-footer">
+            <button onclick="prevPicture(${i})">←</button>
+            <span>${i + 1} / ${images.length}</span>
+            <button onclick="nextPicture(${i})">→</button>
+        </footer>
+    </div>
+    `;
 }
 
 function prevPicture(i) {
